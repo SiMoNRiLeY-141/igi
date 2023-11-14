@@ -1,0 +1,106 @@
+/* Registration.css */
+
+.on-container {
+  background-image: url('bg-image.jpg');
+  background-size:cover;
+  background-position: center;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position:absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+}
+
+.container {
+  max-width: 400px;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 80px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display:block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.form-group input {
+  width: calc(100% - 10px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.password-requirements {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.password-requirements li {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.password-requirements .valid {
+  color: #4caf50;
+}
+
+.password-requirements .invalid {
+  color: #f44336;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.button-container button {
+  background-color: #2196f3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-container button:hover {
+  background-color: #0b7dda;
+  transform: scale(1.05);
+}
+
+.error-message {
+  color: #f44336;
+  margin-top: 10px;
+}

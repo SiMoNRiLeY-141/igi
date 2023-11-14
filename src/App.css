@@ -1,0 +1,45 @@
+/* App.css */
+
+nav {
+  background-color: #4CAF50;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Add a container for each link */
+li {
+  display: inline;
+}
+
+/* Style each link container */
+.link-container {
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Style Link components with a capital 'L' */
+Link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Change the text color of Link on hover */
+Link:hover {
+  color: #ffcc00;
+}
+
+/* Change the background color of each link container on hover */
+.link-container:hover {
+  background-color: #333;
+}
