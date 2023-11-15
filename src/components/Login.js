@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Registration.css'; // Import the shared styles
-import { Link , useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Login({ onLogin }) {
   const [formData, setFormData] = useState({
@@ -43,10 +43,15 @@ function Login({ onLogin }) {
         setError('Login failed. Please check your credentials.');
       }
     } catch (error) {
-      if (error.response && error.response.status === 401) {
-        setError('Invalid email or password. Please try again.');
+      if (error.response) {
+        if (error.response.status === 401) {
+          setError('Invalid email or password. Please try again.');
+        } else {
+          setError('An error occurred during login. Please try again.');
+          console.error('Error logging in:', error.message);
+        }
       } else {
-        setError('An error occurred during login. Please try again.');
+        setError('An unexpected error occurred. Please try again.');
         console.error('Error logging in:', error.message);
       }
     } finally {
@@ -68,6 +73,7 @@ function Login({ onLogin }) {
               value={formData.email}
               onChange={handleChange}
               required
+              aria-label="Email"
             />
           </div>
           <div className="form-group">
@@ -78,6 +84,7 @@ function Login({ onLogin }) {
               value={formData.password}
               onChange={handleChange}
               required
+              aria-label="Password"
             />
           </div>
           <div className="button-container">
