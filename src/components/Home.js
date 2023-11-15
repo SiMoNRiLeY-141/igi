@@ -8,8 +8,8 @@ const Home = () => {
   return (
     <div className="home-container">
       <header>
-        <h1>Welcome to Your App</h1>
-        <p>Where amazing things happen</p>
+        <h1>Welcome to Contacts by IGI</h1>
+        <p>Where all your contacts reside</p>
       </header>
 
       <section className="features">
