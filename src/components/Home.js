@@ -7,9 +7,9 @@ import './Home.css';
 const Home = () => {
   return (
     <div className="home-container">
-      <header>
+      <header className="header">
         <h1>Welcome to Contacts by IGI</h1>
-        <p>Where all your contacts reside</p>
+        <p1>Where all your contacts reside</p1>
       </header>
 
       <section className="features">

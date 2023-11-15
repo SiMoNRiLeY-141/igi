@@ -69,7 +69,7 @@ function Registration() {
       const { name, email, password } = formData;
 
       if (Object.values(passwordRequirements).every((requirement) => requirement)) {
-        const response = await axios.post('https://igibackend.netlify.app/register', {
+        const response = await axios.post('http://localhost:5000/register', {
           name,
           email,
           password,

@@ -36,6 +36,7 @@ function Login({ onLogin }) {
 
       // Check if login was successful
       if (response.status === 200) {
+        const token = response.data.token;
         onLogin(response.data.user); // Pass the user data to the parent component
         navigate('/contacts'); // Redirect to the '/contacts' page
       } else {
